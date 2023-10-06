@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade1 media</title>
+</head>
+<body>
+    
+    <div id="Media"></div>
+    <script>
+        let nomeAluno= prompt("Digite o nome do aluno");
+        let nota1= Number(prompt("Digite a primeira nota do seu aluno"));
+        let nota2= Number(prompt("Digite a segunda nota do seu aluno"));
+        let nota3= Number(prompt("Digite a terceira nota do seu aluno"));
+        let media= Number ;
+        let retorno="";
+        let retorno2="";
+        let decrescente= "";
+
+        media= Math.floor((nota1 + nota2 + nota3) /3);
+
+        switch (media){
+            case 10:
+                retorno = 'O aluno ' + nomeAluno + ' foi aprovado com média ' + media + '.';
+                break;
+            case 9:
+                retorno = 'O aluno ' + nomeAluno + ' foi aprovado com média ' + media + '.';
+                break;
+            case 8:
+                retorno = 'O aluno ' + nomeAluno + ' foi aprovado com média ' + media + '.';
+                break;
+            case 7:
+                retorno = 'O aluno ' + nomeAluno + ' foi aprovado com média ' + media + '.';
+                break;
+            case 6:
+                retorno = 'O aluno ' + nomeAluno + ' foi aprovado com média ' + media + '.';
+                break;
+            case 5:
+                retorno= 'O aluno ' + nomeAluno + ' foi reprovado com média ' + media + '.';
+                break;
+            case 4:
+                retorno= 'O aluno ' + nomeAluno + ' foi reprovado com média ' + media + '.';
+                break;
+            case 3:
+                retorno= 'O aluno ' + nomeAluno + ' foi reprovado com média ' + media + '.';
+                break;
+            case 2:
+                retorno= 'O aluno ' + nomeAluno + ' foi reprovado com média ' + media + '.';
+                break;
+            case 1:
+                retorno= 'O aluno ' + nomeAluno + ' foi reprovado com média ' + media + '.';
+                break;
+            default:
+                retorno= 'Não é uma opção válida, por favor digite novamente';
+                break;
+        }
+        decrescente = [nota1, nota2, nota3].sort((a, b) => b - a);
+        retorno2= ("Notas em ordem decrescente:", decrescente);
+
+        /*O ponto falho dessa atividade é que eu não descobri como não aparecer os resultados da nota, caso o resultado não fosse especifico, 
+        pesquisando foi encontrado o termo Math.floor, q é usado para arredondar o resultado */
+
+        document.getElementById('Media').innerHTML = retorno + '<br>' + retorno2
+    </script>
+</body>
+</html>

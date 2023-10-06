@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <div id="atividade5"></div>
+    <script>
+        let data= prompt('Digite uma data completa, do seguinte modelo dd/mm/aaaa:')
+        let mesNome= "";
+        let divisao = data.split("/");
+        let dia= parseInt(divisao[0]);
+        let mes= parseInt(divisao[1]);
+        let ano= parseInt(divisao[2]);
+        let resultado1 = "";
+
+        switch (mes) {
+            case 1:
+                mesNome = "janeiro";
+                break;
+            case 2:
+                mesNome = "fevereiro";
+                break;
+            case 3:
+                mesNome = "março";
+                break;
+            case 4:
+                mesNome = "abril"
+                break;
+            case 5:
+                mesNome = "maio";
+                break;
+            case 6:
+                mesNome = "junho";
+                break;
+            case 7:
+                mesNome = "julho";
+                break;
+            case 8:
+                mesNome = "agosto";
+                break;
+            case 9:
+                mesNome = "setembro";
+                break;
+            case 10:
+                mesNome = "outubro";
+                break;
+            case 11:
+                mesNome = "novembro";
+                break;
+            case 12:
+                mesNome = "dezembro";
+                break;
+            default: 
+                mesNome = "Mês errado";
+                break;
+        }
+        resultado1 = dia + " de " + mesNome + " de " + ano;
+
+
+        document.getElementById('atividade5').innerHTML = "A data digitada foi " + data + ", essa data é correspondente a: " + resultado1;
+    </script>
+</body>
+</html>

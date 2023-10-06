@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade2 peso</title>
+</head>
+<body>
+    <h1>Quem é mais pesado?</h1>
+
+    <div id="NomePeso"></div>
+    <script>
+        let nome1 = prompt('Digite o nome da primeira pessoa');
+        let peso1 = Number(prompt('Digite o peso da primeira pessoa, em kg'));
+        let nome2 = prompt('Digite o nome da segunda pessoa');
+        let peso2 = Number(prompt('Digite o peso da segunda pessoa, em kg'));
+        let nome3 = prompt('Digite o nome da terceira pessoa');
+        let peso3 = Number(prompt('Digite o peso da terceira pessoa, em kg'));
+
+        let MaiorPeso = Number("");
+        let pesoMedio = Number("");
+        let MenorPeso = Number("");
+
+        switch (true){
+            case peso1 > peso2 && peso1 > peso3:
+                MaiorPeso= nome1 + ", "+ peso1 + " kg.";
+                if(peso2 > peso3){
+                    pesoMedio= nome2 + ", "+ peso2 + " kg.";
+                    MenorPeso= nome3 + ", "+ peso3 + " kg.";
+                    break;
+                }else{
+                    pesoMedio= nome3 + ", "+ peso3 + " kg.";
+                    MenorPeso= nome2 + ", "+ peso2 + " kg.";
+                    break;}
+            case peso2 > peso1 && peso2 > peso3:
+                MaiorPeso= nome2 + ", "+ peso2 + " kg.";
+                if(peso1 > peso3){
+                    pesoMedio=  nome1 + ", "+ peso1 + " kg.";
+                    MenorPeso= nome3 + ", "+ peso3 + " kg.";
+                    break;
+                }else{
+                    pesoMedio= nome3 + ", "+ peso3 + " kg.";
+                    MenorPeso= nome1 + ", "+ peso1 + " kg.";
+                    break;}
+            case peso3 > peso1 && peso3 > peso2:
+                MaiorPeso= nome3 + ", "+ peso3 + " kg.";
+                if(peso1 > peso2){
+                    pesoMedio= nome1 + ", "+ peso1 + " kg.";
+                    MenorPeso= nome2 + ", "+ peso2 + " kg.";
+                    break;
+                }else{
+                    pesoMedio= nome2 + ", "+ peso2 + " kg.";
+                    MenorPeso= nome1 + ", "+ peso1 + " kg.";
+                    break;}
+        }
+        document.getElementById("NomePeso").innerHTML= "<h3>ordem decrescente por peso</h3>" + MaiorPeso + "<br>" + pesoMedio + "<br>" + MenorPeso;
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade4 Comisssão</title>
+</head>
+<body>
+    <div id="Atividade4"></div>
+    <script>
+        let nomeFunc= prompt("Digite o nome do funcionário");
+        let Numvend= Number(prompt("Digite a quantidade de vendas do seu funcionário"));
+        let Comissao= Number;
+        let retorno= Number;
+
+        switch (true){
+            case ( Numvend >500):
+                retorno = 2;
+                break;
+            case ( Numvend >= 250):
+                retorno = 1.5;
+                break;
+            case (Numvend >=1):
+                retorno = 1;
+                break;
+            default:
+                retorno = "Opção não válida";
+                break;
+        }
+
+        Comissao= Numvend * retorno;
+
+        document.getElementById("Atividade4").innerHTML = "Funcionário: " + nomeFunc + "<br>Valor comissão: R$" + Comissao;
+    </script>
+
+</body>
+</html>

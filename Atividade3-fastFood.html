@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade3 fastFood</title>
+</head>
+<body>
+    <img src="cardapio.png">
+    <div id="FastFood"></div>
+    <script>
+        let promocao= Number(prompt('Qual a promoção que deseja escolher? (1-Big Super Sanduba, 2-Quase Super Sanduba, 3-Mirradus Sanduba)'));
+        let nomeCliente = prompt('Digite o nome do cliente');
+        let MeioPagamento= prompt('Digite o meio de pagamento');
+        let retorno= "";
+
+        switch (promocao){
+            case 1:
+                retorno= "<h1> Resumo do pedido</h1> Nome do cliente: " + nomeCliente + "<br> Pedido: Promoção Big Super Sanduba (2 hamburgueres, queijo, batata frita e refrigerante) <br> Valor Final: R$5,00 <br> Meio de Pagamento: " + MeioPagamento; 
+                break;
+            case 2: 
+                retorno= "<h1> Resumo do pedido</h1> Nome do cliente: " + nomeCliente + "<br> Pedido: Promoção Quase Super Sanduba (1 hamburguer, batata frita e refrigerante) <br> Valor Final: R$3,00 <br> Meio de Pagamento: " + MeioPagamento;
+                break;
+            case 3:
+                retorno= "<h1> Resumo do pedido</h1> Nome do cliente: " + nomeCliente + "<br> Pedido: Promoção Mirradus Sanduba (1 misto quente e refrigerante) <br> Valor Final: R$1,50 <br> Meio de Pagamento: " + MeioPagamento;
+                break;
+            default:
+                retorno= "Esta opção não é valida, escolha entre nossas opções 1-Big Super Sanduba, 2-Quase Super Sanduba, 3-Mirradus Sanduba, digite somente o número correspondente ;)";
+                break;
+        }
+        document.getElementById("FastFood").innerHTML = retorno;
+    </script>
+</body>
+</html>
